@@ -35,5 +35,26 @@
       }
     });
 
+
+    const tabMenuLinks = document.querySelectorAll(".tab li a");
+
+    tabMenuLinks.forEach(link => {
+      link.addEventListener("click", function() {
+        const target = this.getAttribute("data-rel");
+        const allLinks = document.querySelectorAll(".tab li a");
+
+        allLinks.forEach(link => link.classList.remove("active"));
+        this.classList.add("active");
+
+        const targetTabBox = document.getElementById(target);
+        const allTabBoxes = document.querySelectorAll(".tab__content");
+
+        allTabBoxes.forEach(box => box.style.display = "none");
+        targetTabBox.style.display = "block";
+
+        return false;
+      });
+    });
+
    
    });
