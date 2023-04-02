@@ -28,6 +28,12 @@ body {
   font-size: 16px;
   background: #F7F7F7; }
 
+:focus,
+:focus-visible {
+  outline: none;
+  box-shadow: inset 0px 0px 2px 2px #2F2F30;
+  border-radius: 6px; }
+
 a:link,
 a:visited {
   color: #6665DD; }
@@ -134,10 +140,16 @@ a:hover {
     background-image: url("../img/search.svg");
     background-position: 14px 50%;
     background-repeat: no-repeat;
+    background-color: #ffffff;
     padding-left: 41px;
     border: 1px solid #DBDCDE;
     color: #6C6D6F;
-    line-height: 21px; }
+    line-height: 21px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none; }
+  .input input[type='search']::-webkit-search-cancel-button {
+    -webkit-appearance: none; }
 
 /*------------------------*/
 .form {
@@ -207,8 +219,9 @@ a:hover {
       border: 2px solid #2EB670;
       background-color: #2EB670;
       box-shadow: inset 0 0 0 4px #ffffff; }
+    .form input[type="radio"]:focus + .form__radio-label:before,
     .form input[type="radio"]:checked:focus + .form__radio-label:before {
-      box-shadow: 0 0 2px 1px #2EB670, inset 0 0 0 4px #ffffff; }
+      box-shadow: 0 0 2px 2px #2F2F30, inset 0 0 0 4px #ffffff; }
     .form input[type="radio"]:focus + .form__radio-label:before {
       border-color: #2EB670; }
     .form input[type="radio"] + .form__radio-label:empty:before {
