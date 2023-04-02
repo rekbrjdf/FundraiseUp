@@ -47,7 +47,8 @@ var gulp = require('gulp'),
     jpegrecompress = require('imagemin-jpeg-recompress'), 
     pngquant = require('imagemin-pngquant'), 
     rimraf = require('gulp-rimraf'), 
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    ghPages = require('gulp-gh-pages');
 
 
 gulp.task('webserver', function () {
@@ -147,3 +148,10 @@ gulp.task('default', gulp.series(
     'build',
     gulp.parallel('webserver','watch')      
 ));
+
+
+gulp.task('deploy', function () {
+    return gulp.src('./assets/build/**/*')
+        .pipe(ghPages());
+});
+ 

@@ -1,0 +1,54 @@
+.marker {
+    display: flex;
+    align-items: stretch;
+    &__item {
+        padding: 0 32px;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 1px;
+            background: #D7D8DA;
+        }
+        &:first-child {
+            padding-left: 0;
+        }
+        &:first-child:after {
+            display: none;
+        }
+    }
+    &__label {
+        font-family: "Work Sans", sans-serif; 
+        font-weight: 400;
+        font-size: 14px; 
+        color: $var6;
+        margin-bottom: 2px;
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    &__info_succeeded {
+        color: $var14; 
+    }
+
+}
+
+@media handheld,
+only screen and (max-width: 575px) {
+    .marker { 
+        flex-direction: column;
+        gap: 14px;
+        &__item {
+            padding: 0;
+            &:after {
+                display: none;
+            } 
+        }
+    }
+}

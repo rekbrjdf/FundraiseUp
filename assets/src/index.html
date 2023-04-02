@@ -93,21 +93,18 @@
 				</div>
 				<div class="settings block">
 					<div class="tab">
-						<ul class="tabs">
+						<ul class="tab__menu">
 								<li><a href="#" class="active" data-rel="tab-1">Behavior</a></li>
 								<li><a href="#" data-rel="tab-2" class="">Appearance</a></li>
 								<li><a href="#" data-rel="tab-3" class="">Custom Fields</a></li>
 								<li><a href="#" data-rel="tab-4" class="">Questions</a></li>
 								<li><a href="#" data-rel="tab-5" class="">URL Control</a></li>
-
-
-
 						</ul>
 						<div class="tab__container">
 								 
 								<div id="tab-1"class="tab__content" style="display: block;">
 									
-									<form class="form">
+									<form class="form" action="/" method="get" id="form1">
 										<div class="form__item">
 											<div class="form__label">Designation</div>
 											<div class="form__field-row">
@@ -156,28 +153,28 @@
 										</div>
 										<div class="form__item">
 											<div class="form__label">Border size</div>
-											<div class="form__field form__range">
-												<div class="form__range-wrapper">
-													<input type="range" min="0" max="100" value="2" class="slider" id="myRange">
-													<div id="fill1" class="fill" style="width: 2%;"></div>
+											<div class="form__field range">
+												<div class="range__wrapper">
+													<input type="range" min="0" max="100" value="2" class="range__slider" id="myRange-1">
+													<div id="fill-1" class="range__fill" style="width: 2%;"></div>
 												</div>	 
-												<span id="demo1"></span>
+												<span id="demo-1"></span>
 										  </div> 
 										</div>
 										<div class="form__item">
 											<div class="form__label">Border radius</div>
-											<div class="form__field  form__range">
-												<div class="form__range-wrapper">
-													<input type="range" min="0" max="100" value="15" class="slider" id="myRange2">
-													<div id="fill2" class="fill" style="width: 15%;"></div>
+											<div class="form__field range">
+												<div class="range__wrapper">
+													<input type="range" min="0" max="100" value="15" class="range__slider" id="myRange-2">
+													<div id="fill-2" class="range__fill" style="width: 15%;"></div>
 												</div>	 
-												<span id="demo2"></span> 
+												<span id="demo-2"></span> 
 										  </div> 
 										</div>
 									</form>
 									<div class="tab__footer">
-										<button class="button button-primary">Save changes</button>
-										<button class="button ">Cancel</button>
+										<button form="form1" class="button button-primary" type="submit">Save changes</button>
+										<button class="button" type="reset">Cancel</button>
 
 									</div>
 								</div> 

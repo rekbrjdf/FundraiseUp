@@ -1,0 +1,54 @@
+.donation {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&__name {
+		display: flex;
+		align-items: center;
+		margin-bottom: 4px;
+	}
+	&__amount {
+		font-family: "Work Sans", sans-serif;
+		font-weight: 400;
+		font-size: 16px;
+		color: $var6;
+	}
+	&__main-amount {
+		font-family: "Work Sans", sans-serif;
+		font-weight: 400;
+		font-size: 24px;
+		color: $var7;
+		padding-right: 9px;
+	}
+	&__label {
+		font-family: "Source Code Pro", monospace;
+		font-weight: 400;
+		font-size: 16px;
+		color: $var8;
+	}
+	&__content {
+		font-family: "Source Code Pro", monospace;
+		font-weight: 400;
+		font-size: 16px;
+		color: $var2;
+	}
+	&__copy {
+		border: none;
+		background: transparent;
+		padding: 0;
+        cursor: pointer;
+	}
+}
+
+@media handheld,
+only screen and (max-width: 575px) { 
+    .donation { 
+        gap: 14px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        &__main-amount {
+            font-size: 20px;
+        }
+    } 
+}
