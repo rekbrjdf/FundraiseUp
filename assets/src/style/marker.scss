@@ -16,6 +16,7 @@
         }
         &:first-child {
             padding-left: 0;
+            padding-right: 12px;
         }
         &:first-child:after {
             display: none;
@@ -26,7 +27,7 @@
         font-weight: 400;
         font-size: 14px; 
         color: $var6;
-        margin-bottom: 2px;
+        margin-bottom: 4px;
     }
     &__info {
         display: flex;

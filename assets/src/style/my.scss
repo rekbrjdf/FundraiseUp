@@ -8,6 +8,7 @@ body {
 	font-family: "Work Sans", sans-serif;
 	font-weight: 400;
 	font-size: 16px;
+    background: $var13;
 }
 a:link, 
 a:visited {
@@ -43,7 +44,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 
 
 .content {
-	width: calc(100% - 264px);
+	width: calc(100% - 288px);
 }
 @media handheld,
 only screen and (min-width: 768px) and (max-width: 992px) {
@@ -72,6 +73,7 @@ only screen and (max-width: 575px) {
 	font-weight: 400;
 	font-size: 24px;
 	color: $var2;
+    line-height: 32px;
 }
 .settings {
 	padding: 32px 24px;
@@ -82,6 +84,7 @@ only screen and (max-width: 575px) {
 	border-radius: 8px;
 	margin-bottom: 24px;
 	overflow: hidden;
+    background: $var11;
 	&__header {
 		padding: 28px 32px;
 		border-bottom: 1px solid $var3;
@@ -94,6 +97,10 @@ only screen and (max-width: 575px) {
 .filter {
 	display: flex;
 	gap: 28px;
+    &__form {
+        max-width: 336px;
+        width: 100%;
+    }
     &__select {
         font-family: "Work Sans", sans-serif;
         font-weight: 400;
@@ -123,23 +130,33 @@ only screen and (max-width: 575px) {
 		background-image: url("../img/search.svg");
 		background-position: 14px 50%;
 		background-repeat: no-repeat;
-		padding-left: 48px;
+		padding-left: 41px;
 		border: 1px solid $var3;
 		color: $var6;
+        line-height: 21px;
 	}
 }  
 /*------------------------*/   
 .form {
-	padding: 16px;
+	padding: 10px 35px;
 	max-width: 486px;
 	&__item {
 		display: flex;
 		margin-bottom: 24px;
-		align-items: flex-start;
+		align-items: baseline;
 		gap: 16px;
+        &_margin {
+            margin-bottom: 5px;
+
+        }
 	}
 	&__label {
-		padding: 4px 0;
+		padding: 11px 0;
+		min-width: 124px;
+		text-align: right; 
+	} 
+    &__label-colum {
+		padding: 0;
 		min-width: 124px;
 		text-align: right;
 	}
@@ -150,6 +167,7 @@ only screen and (max-width: 575px) {
 			display: flex;
 			flex-direction: column;
 			gap: 16px;
+            width: 100%;
 		}
 		&-row {
 			display: flex;
@@ -171,6 +189,7 @@ only screen and (max-width: 575px) {
 		position: relative;
 	} 
 	&__radio-label {
+        line-height: 24px;
 		margin-left: calc(24px + 12px);
 	}
 	input[type="radio"] {
@@ -238,18 +257,20 @@ only screen and (max-width: 575px) {
 	font-family: "Work Sans", sans-serif;
 	font-weight: 400;
 	font-size: 16px;
-	padding: 8px 20px 8px 12px;
+	padding: 7px 20px 8px 12px;
+    line-height: 24px;
 	cursor: pointer;
 	color: $var2; 
 	appearance: none;
 	background-image: url("../img/arrow-select.svg");
 	background-repeat: no-repeat;
-	background-size: 18px;
+	background-size: 25px;
     background-position: 100% 50%;
     background-color: $var11; 
 	border: 1px solid $var5;
 	border-radius: 6px;
 	width: 100%;
+    box-sizing: content-box;
     &_currency {
         width: 80px;
     }
