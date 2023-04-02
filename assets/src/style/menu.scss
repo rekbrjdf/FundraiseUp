@@ -45,6 +45,7 @@ only  screen and (min-width: 576px)  and (max-width: 767px) {
             &:hover { 
                 width: 25%;
                 border-right: 1px solid $var3;
+                border-bottom: none;
             }
         } 
         &__item:last-child {
