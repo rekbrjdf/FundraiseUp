@@ -7,7 +7,10 @@
 		align-items: baseline;
 		gap: 16px;
         &_margin {
-            margin-bottom: 5px; 
+            margin-bottom: 8px; 
+        }
+        &_margin-lg {
+            margin-bottom: 20px; 
         }
 	}
 	&__label {
