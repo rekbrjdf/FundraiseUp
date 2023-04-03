@@ -1,0 +1,67 @@
+.radio {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    &__label {
+        line-height: 24px;
+		margin-left: calc(24px + 12px);
+	}
+    input[type="radio"] {
+		position: absolute;
+		opacity: 0;
+		+ .radio__label:before {
+			content: "";
+			background: none;
+			border-radius: 100%;
+			border: 1px solid $var5;
+			display: inline-block;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 24px;
+			margin: auto;
+			height: 24px;
+			box-sizing: border-box;
+			position: absolute;
+			cursor: pointer;
+			text-align: center; 
+		}
+		&:checked + .radio__label:before {
+			border: 2px solid $var14;
+			background-color: $var14;
+			box-shadow: inset 0 0 0 4px $var11;
+		}
+        &.disabled {
+            pointer-events: none;
+            cursor: none; 
+        }
+        &.disabled + .radio__label:before,
+        &:disabled + .radio__label:before {
+            box-shadow: inset 0 0 0 4px $var9; 
+			border-color: $var3;
+            background: $var9;
+            pointer-events: none;
+            cursor: none;  
+        }
+        &:checked.disabled + .radio__label:before,
+        &:checked:disabled + .radio__label:before {
+            box-shadow: inset 0 0 0 4px $var9; 
+			border-color: $var3;
+            background: $var3;
+            pointer-events: none;
+            cursor: none;  
+
+
+		}
+        &:focus + .radio__label:before,
+        &:checked:focus + .radio__label:before {
+            box-shadow: 0 0 2px 2px $var2, inset 0 0 0 4px $var11; 
+			border-color: $var14;   
+		}
+		+ .radio__label:empty:before {
+			margin-right: 0;
+		}
+	} 
+} 
