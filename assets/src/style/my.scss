@@ -10,6 +10,12 @@ body {
 	font-size: 16px;
     background: $var13;
 }
+:focus,
+:focus-visible {
+    outline: none; 
+    box-shadow: inset 0px 0px 2px 2px $var2;
+    border-radius: 6px;
+}
 a:link, 
 a:visited {
    color: $var1; 
@@ -131,11 +137,16 @@ only screen and (max-width: 575px) {
 		background-image: url("../img/search.svg");
 		background-position: 14px 50%;
 		background-repeat: no-repeat;
+        background-color: $var11;
 		padding-left: 41px;
 		border: 1px solid $var3;
 		color: $var6;
-        line-height: 21px;
+        line-height: 21px; 
+        appearance: none;
 	}
+    input[type='search']::-webkit-search-cancel-button {
+        -webkit-appearance: none;	
+    }
 }  
 /*------------------------*/   
 .form {
@@ -219,8 +230,9 @@ only screen and (max-width: 575px) {
 			background-color: $var14;
 			box-shadow: inset 0 0 0 4px $var11;
 		}
+        &:focus + .form__radio-label:before,
         &:checked:focus + .form__radio-label:before {
-            box-shadow: 0 0 2px 1px $var14, inset 0 0 0 4px $var11;
+            box-shadow: 0 0 2px 2px $var2, inset 0 0 0 4px $var11;
           }
 		&:focus + .form__radio-label:before {
 			border-color: $var14;
