@@ -264,7 +264,9 @@ a:active, a:hover {
     align-items: baseline;
     gap: 16px; }
     .form__item_margin {
-      margin-bottom: 5px; }
+      margin-bottom: 8px; }
+    .form__item_margin-lg {
+      margin-bottom: 20px; }
   .form__label {
     padding: 11px 0;
     min-width: 124px;
