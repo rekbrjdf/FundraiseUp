@@ -26,7 +26,7 @@
                 background: url("../img/check.svg");  
 			}
 		}
-        &:focus {
+        &:focus-visible {
             outline: none; 
             box-shadow: 0px 0px 2px 2px $var2;
             border-radius: 6px;

@@ -11,9 +11,7 @@
             justify-content: flex-start;
             gap: 8px;
             line-height: 16px;
-            font-family: "Work Sans", sans-serif;
-            font-weight: 400;
-            font-size: 16px;
+            @include main-font(400, 16px);
             color: $var2;
             text-decoration: none;
             border-bottom: 1px solid $var3;

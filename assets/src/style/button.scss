@@ -1,0 +1,45 @@
+.button {
+    background: $var11;
+    border: 1px solid $var5;
+    border-radius: 8px;
+    padding: 12px 24px;
+    @include main-font(400, 16px);
+    color: $var2;
+    cursor: pointer;
+    &:visited,
+    &:focus,
+    &:active {
+        background: $var11;
+        border: 1px solid $var5;
+        border-radius: 8px;
+        padding: 12px 24px;
+        @include main-font(400, 16px);
+        color: $var2;
+        cursor: pointer;
+    } 
+    &:hover {
+        background: $var11;
+        color: $var14;
+		border: 1px solid $var14;
+    } 
+	&-primary {
+        background: $var14;
+        border: 1px solid $var14;
+        border-radius: 6px;
+        color: $var11;
+        &:visited,
+        &:focus,
+        &:active {
+            background: $var14;
+            border: 1px solid $var14;
+            border-radius: 6px;
+            color: $var11;
+        }
+        &:hover {
+            background: $var11;
+            color: $var14;
+            border: 1px solid $var14;
+        }
+		
+	}
+} 

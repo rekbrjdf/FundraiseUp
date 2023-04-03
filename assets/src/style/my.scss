@@ -5,12 +5,9 @@ body {
 	padding: 0;
 	margin: 0;
 	position: relative;
-	font-family: "Work Sans", sans-serif;
-	font-weight: 400;
-	font-size: 16px;
+	@include main-font(400, 16px);
     background: $var13;
-}
-:focus,
+} 
 :focus-visible {
     outline: none; 
     box-shadow: inset 0px 0px 2px 2px $var2;
@@ -24,12 +21,6 @@ a:active,
 a:hover {
     text-decoration: none;
 	color: $var1;
-}
-.logo {
-	text-decoration: none;
-	&:hover {
-		text-decoration: none;
-	}
 }
 .main-container {
 	max-width: 1224px;
@@ -48,7 +39,6 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     }
 }
 
-
 .content {
 	width: calc(100% - 288px);
 }
@@ -58,6 +48,7 @@ only screen and (min-width: 768px) and (max-width: 992px) {
         width: calc(100% - 215px);
     }
 }
+
 @media handheld,
 only screen and (min-width: 576px)  and (max-width: 767px) {
     .content {
@@ -66,6 +57,7 @@ only screen and (min-width: 576px)  and (max-width: 767px) {
 
     }
 }
+
 @media handheld,
 only screen and (max-width: 575px) {
     .content {
@@ -75,9 +67,7 @@ only screen and (max-width: 575px) {
 }
 
 .title {
-	font-family: "Work Sans", sans-serif;
-	font-weight: 400;
-	font-size: 24px;
+	@include main-font(400, 24px);
 	color: $var2;
     line-height: 32px;
 }
@@ -100,167 +90,6 @@ only screen and (max-width: 575px) {
 		background: $var4;
 	}
 }
-.filter {
-	display: flex;
-	gap: 28px;
-    &__form {
-        max-width: 336px;
-        width: 100%;
-    }
-    &__select {
-        font-family: "Work Sans", sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        padding: 8px 25px 8px 12px;
-        cursor: pointer;
-        color: $var2; 
-        appearance: none;
-        background-image: url("../img/arrow-filter.svg");
-        background-repeat: no-repeat;
-        background-color: transparent;
-        background-size: 9px;
-        background-position: 95% 50%;
-        border: none; 
-        border-radius: 8px;
-    }
-}
-.input {
-	border: 1px solid $var5;
-	border-radius: 8px;
-	font-family: "Work Sans", sans-serif;
-	font-weight: 400;
-	font-size: 16px;
-	padding: 8px 12px;
-	color: $var2;
-	width: 100%;
-	&-search {
-		background-image: url("../img/search.svg");
-		background-position: 14px 50%;
-		background-repeat: no-repeat;
-        background-color: $var11;
-		padding-left: 41px;
-		border: 1px solid $var3;
-		color: $var6;
-        line-height: 21px; 
-        appearance: none;
-	}
-    input[type='search']::-webkit-search-cancel-button {
-        -webkit-appearance: none;	
-    }
-}  
-/*------------------------*/   
-.form {
-	padding: 10px 35px;
-	max-width: 486px;
-	&__item {
-		display: flex;
-		margin-bottom: 24px;
-		align-items: baseline;
-		gap: 16px;
-        &_margin {
-            margin-bottom: 5px; 
-        }
-	}
-	&__label {
-		padding: 11px 0;
-		min-width: 124px;
-		text-align: right;  
-		display: block;
-	}  
-    &__label-colum {
-		padding: 0;
-		min-width: 124px;
-		text-align: right;
-	}
-	&__field {
-		display: flex;
-		width: 100%;
-		&-colum {
-			display: flex;
-			flex-direction: column;
-			gap: 16px;
-            width: 100%;
-		}
-		&-row {
-			display: flex;
-			flex-direction: row;
-			gap: 24px;
-            max-width: 296px;
-            width: 100%;
-		}
-	} 
-}
-.select {
-	font-family: "Work Sans", sans-serif;
-	font-weight: 400;
-	font-size: 16px;
-	padding: 7px 20px 8px 12px;
-    line-height: 24px;
-	cursor: pointer;
-	color: $var2; 
-	appearance: none;
-	background-image: url("../img/arrow-select.svg");
-	background-repeat: no-repeat;
-	background-size: 25px;
-    background-position: 100% 50%;
-    background-color: $var11; 
-	border: 1px solid $var5;
-	border-radius: 6px;
-	width: 100%;
-    box-sizing: content-box;
-    &_currency {
-        width: 80px;
-    }
-}
-.button {
-    background: $var11;
-    border: 1px solid $var5;
-    border-radius: 8px;
-    padding: 12px 24px;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: $var2;
-    cursor: pointer;
-    &:visited,
-    &:focus,
-    &:active {
-        background: $var11;
-        border: 1px solid $var5;
-        border-radius: 8px;
-        padding: 12px 24px;
-        font-family: "Work Sans", sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        color: $var2;
-        cursor: pointer;
-    } 
-    &:hover {
-        background: $var11;
-        color: $var14;
-		border: 1px solid $var14;
-    } 
-	&-primary {
-        background: $var14;
-        border: 1px solid $var14;
-        border-radius: 6px;
-        color: $var11;
-        &:visited,
-        &:focus,
-        &:active {
-            background: $var14;
-            border: 1px solid $var14;
-            border-radius: 6px;
-            color: $var11;
-        }
-        &:hover {
-            background: $var11;
-            color: $var14;
-            border: 1px solid $var14;
-        }
-		
-	}
-} 
 
 @media handheld,
 only screen and (max-width: 575px) {
@@ -274,33 +103,11 @@ only screen and (max-width: 575px) {
         &__wrapper {
             padding: 20px 16px; 
         }
-    }
-    .filter { 
-        flex-direction: column;
-        gap: 14px;
-        &__select { 
-            width: max-content;
-        }
-    }
+    } 
     .center {
         flex-direction: column; 
     }  
     .settings {
         padding: 20px 16px;
-    }
-    .form {
-        padding: 0;
-        &__item { 
-            align-items: flex-start;
-            justify-content: flex-start;
-            gap: 8px;
-            flex-direction: column;
-            margin-bottom: 18px;
-        }
-        &__label {
-            padding: 0;
-            min-width: auto;
-            text-align: left;
-        }
-    } 
+    }   
 }

@@ -51,12 +51,11 @@
 			border-color: $var3;
             background: $var3;
             pointer-events: none;
-            cursor: none;  
-
+            cursor: none;
 
 		}
-        &:focus + .radio__label:before,
-        &:checked:focus + .radio__label:before {
+        &:focus-visible + .radio__label:before,
+        &:checked:focus-visible + .radio__label:before {
             box-shadow: 0 0 2px 2px $var2, inset 0 0 0 4px $var11; 
 			border-color: $var14;   
 		}

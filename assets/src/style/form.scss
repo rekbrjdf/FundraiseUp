@@ -1,0 +1,84 @@
+.form {
+	padding: 10px 35px;
+	max-width: 486px;
+	&__item {
+		display: flex;
+		margin-bottom: 24px;
+		align-items: baseline;
+		gap: 16px;
+        &_margin {
+            margin-bottom: 5px; 
+        }
+	}
+	&__label {
+		padding: 11px 0;
+		min-width: 124px;
+		text-align: right;  
+		display: block;
+	}  
+    &__label-colum {
+		padding: 0;
+		min-width: 124px;
+		text-align: right;
+	}
+	&__field {
+		display: flex;
+		width: 100%;
+		&-colum {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+            width: 100%;
+		}
+		&-row {
+			display: flex;
+			flex-direction: row;
+			gap: 24px;
+            max-width: 296px;
+            width: 100%;
+		}
+	} 
+}
+
+@media handheld,
+only screen and (max-width: 575px) {
+    .main-container { 
+        padding: 15px;
+    }
+    .block {
+        &__header {
+            padding: 20px 16px; 
+        }
+        &__wrapper {
+            padding: 20px 16px; 
+        }
+    }
+    .filter { 
+        flex-direction: column;
+        gap: 14px;
+        &__select { 
+            width: max-content;
+        }
+    }
+    .center {
+        flex-direction: column; 
+    }  
+    .settings {
+        padding: 20px 16px;
+    }
+    .form {
+        padding: 0;
+        &__item { 
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 8px;
+            flex-direction: column;
+            margin-bottom: 18px;
+        }
+        &__label {
+            padding: 0;
+            min-width: auto;
+            text-align: left;
+        }
+    } 
+}

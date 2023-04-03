@@ -3,16 +3,19 @@
     src: url('../fonts/WorkSansRegular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 } 
 @font-face {
     font-family: 'Work Sans'; 
     src: url('../fonts/WorkSansSemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: bold;
+    font-display: swap;
 } 
 @font-face {
     font-family: 'Source Code Pro'; 
     src: url('../fonts/SourceCodeProRegular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 } 

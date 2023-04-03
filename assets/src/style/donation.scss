@@ -12,16 +12,12 @@
         font-size: 14px;
 	}
 	&__amount {
-		font-family: "Work Sans", sans-serif;
-		font-weight: 400;
-		font-size: 16px;
+        @include main-font(400, 16px);
 		color: $var6;
         line-height: 32px;
 	}
 	&__main-amount {
-		font-family: "Work Sans", sans-serif;
-		font-weight: 400;
-		font-size: 24px;
+        @include main-font(400, 24px);
 		color: $var7;
 		padding-right: 9px;
 	}
@@ -55,6 +51,7 @@ only screen and (max-width: 575px) {
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
+        padding: 16px 16px;
         &__main-amount {
             font-size: 20px;
         }

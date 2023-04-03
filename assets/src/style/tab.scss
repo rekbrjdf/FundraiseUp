@@ -12,8 +12,7 @@
             cursor: pointer;
             padding: 16px 15px 15px 16px;
             box-sizing: border-box;
-            font-weight: 600;
-            font-size: 12px;
+            @include main-font(600, 12px); 
             letter-spacing: 0.03em;
             text-transform: uppercase;
             text-decoration: none;

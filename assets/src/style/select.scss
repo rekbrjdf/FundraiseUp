@@ -1,0 +1,29 @@
+.select {
+	@include main-font(400, 16px);
+	padding: 7px 20px 8px 12px;
+    line-height: 24px;
+	cursor: pointer;
+	color: $var2; 
+	appearance: none;
+	background-image: url("../img/arrow-select.svg");
+	background-repeat: no-repeat;
+	background-size: 25px;
+    background-position: 100% 50%;
+    background-color: $var11; 
+	border: 1px solid $var5;
+	border-radius: 6px;
+	width: 100%;
+    box-sizing: content-box;
+    &:disabled,
+    &.disabled {
+        background-color: $var9;
+        color: $var3;
+	    border: 1px solid $var3;
+        background-image: url("../img/arrow-select-disabled.svg");
+        pointer-events: none;
+        
+    }
+    &_currency {
+        width: 80px;
+    }
+}

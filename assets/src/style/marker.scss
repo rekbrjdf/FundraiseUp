@@ -23,9 +23,7 @@
         }
     }
     &__label {
-        font-family: "Work Sans", sans-serif; 
-        font-weight: 400;
-        font-size: 14px; 
+        @include main-font(400, 14px); 
         color: $var6;
         margin-bottom: 4px;
     }
