@@ -13,14 +13,16 @@ body {
     box-shadow: inset 0px 0px 2px 2px $var2;
     border-radius: 6px;
 }
-a:link, 
-a:visited {
-   color: $var1; 
-} 
-a:active, 
-a:hover {
-    text-decoration: none;
-	color: $var1;
+a {
+    &:link, 
+    &:visited {
+        color: $var1; 
+    } 
+    &:active, 
+    &:hover {
+        text-decoration: none;
+        color: $var1;
+    }
 }
 .main-container {
 	max-width: 1224px;
